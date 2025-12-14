@@ -1,13 +1,14 @@
 defmodule ElixirTodoListWeb.Router do
   use ElixirTodoListWeb, :router
 
+  # 👉 ESSA LINHA É A QUE FALTAVA
   import Phoenix.LiveView.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, html: {ElixirTodoListWeb.Layouts, :root}
+    plug :put_root_layout, {ElixirTodoListWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
