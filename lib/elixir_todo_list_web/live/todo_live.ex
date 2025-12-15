@@ -1,38 +1,21 @@
 defmodule ElixirTodoListWeb.TodoLive do
   use ElixirTodoListWeb, :live_view
 
-  @impl true
   def mount(_params, _session, socket) do
-    {:ok,
-     assign(socket,
-       todos: [],
-       new_todo: ""
-     )}
+    {:ok, assign(socket, todos: [], new_todo: "")}
   end
 
-  @impl true
-  def handle_event("add_todo", %{"todo" => todo}, socket) do
-    todos = socket.assigns.todos ++ [todo]
-
-    {:noreply,
-     assign(socket,
-       todos: todos,
-       new_todo: ""
-     )}
-  end
-
-  @impl true
   def render(assigns) do
     ~H"""
-    <div style="padding: 2rem;">
-      <h1>Minha Lista de Tarefas</h1>
+    <div style="padding: 40px; font-family: Arial;">
+      <h1>📝 Todo List</h1>
 
-      <form phx-submit="add_todo">
+      <form phx-submit="add">
         <input
           type="text"
           name="todo"
           value={@new_todo}
-          placeholder="Nova tarefa"
+          placeholder="Digite uma tarefa"
         />
         <button type="submit">Adicionar</button>
       </form>
@@ -44,5 +27,13 @@ defmodule ElixirTodoListWeb.TodoLive do
       </ul>
     </div>
     """
+  end
+
+  def handle_event("add", %{"todo" => todo}, socket) do
+    {:noreply,
+     assign(socket,
+       todos: socket.assigns.todos ++ [todo],
+       new_todo: ""
+     )}
   end
 end

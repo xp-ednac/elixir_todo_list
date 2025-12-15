@@ -1,4 +1,4 @@
-defmodule ElixirTodoListWeb.ErrorHTML do
+defmodule ElixirTodoListWeb.ErrorView do
   use ElixirTodoListWeb, :html
 
   def render("404.html", _assigns), do: "Página não encontrada"
