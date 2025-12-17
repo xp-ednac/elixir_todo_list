@@ -2,6 +2,7 @@
 ## Desenvolvimento de uma Todo List em Elixir com Phoenix LiveView
 
 ### 📌 Informações Gerais
+ **Disciplina:** UNIVERSIDADE FEDERAL DO MARANHÃO - UFMA
 - **Discente:** Edna Cristina Durans Santos  
 - **Referência Didática:** Desenvolvimento de uma Todo List utilizando Elixir e Phoenix LiveView  
 - **Disciplina:** TOPICOS DE ENGENHARIA DA COMPUTACAO II
