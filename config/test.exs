@@ -4,7 +4,7 @@ import Config
 # you can enable the server option below.
 config :elixir_todo_list, ElixirTodoListWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "VTsU2UCbuBg8OhfKT8O8WwPt+jA0DpwxBBqzzVzajcl6oo1NQAb0aUHadv4191aE",
+  secret_key_base: "xrZxk/0QVJDsc+3nqLmnzy0Bxg8wEbnzk4zRqAZ5Yd7zAj5LtHV/WnwU+3JlJSTL",
   server: false
 
 # In test we don't send emails

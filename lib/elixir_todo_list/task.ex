@@ -1,4 +1,4 @@
-defmodule ElixirTodoList.Todos.Todo do
+defmodule ElixirTodoList.Task do
   use Ecto.Schema
   import Ecto.Changeset
 
@@ -6,11 +6,12 @@ defmodule ElixirTodoList.Todos.Todo do
     field :title, :string
     field :completed, :boolean, default: false
 
-    timestamps()
+    timestamps()  # inserted_at e updated_at
   end
 
-  def changeset(todo, attrs) do
-    todo
+  @doc false
+  def changeset(task, attrs) do
+    task
     |> cast(attrs, [:title, :completed])
     |> validate_required([:title])
   end

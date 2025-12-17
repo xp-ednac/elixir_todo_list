@@ -1,30 +1,32 @@
 defmodule ElixirTodoList.Todos do
   import Ecto.Query, warn: false
-  alias ElixirTodoList.Repo
-  alias ElixirTodoList.Todos.Task
 
-  # LISTAR
+  alias ElixirTodoList.Repo
+  alias ElixirTodoList.Todos.Todo
+
   def list_todos do
-    Repo.all(Task)
+    Repo.all(Todo)
   end
 
-  # BUSCAR
-  def get_todo!(id), do: Repo.get!(Task, id)
+  def get_todo!(id), do: Repo.get!(Todo, id)
 
-  # CRIAR
   def create_todo(attrs \\ %{}) do
-    %Task{}
-    |> Task.changeset(attrs)
+    %Todo{}
+    |> Todo.changeset(attrs)
     |> Repo.insert()
   end
 
-  # DELETAR
-  def delete_todo(%Task{} = task) do
-    Repo.delete(task)
+  def update_todo(%Todo{} = todo, attrs) do
+    todo
+    |> Todo.changeset(attrs)
+    |> Repo.update()
   end
 
-  # CHANGESET (FORM)
-  def change_todo(%Task{} = task, attrs \\ %{}) do
-    Task.changeset(task, attrs)
+  def delete_todo(%Todo{} = todo) do
+    Repo.delete(todo)
+  end
+
+  def change_todo(%Todo{} = todo, attrs \\ %{}) do
+    Todo.changeset(todo, attrs)
   end
 end

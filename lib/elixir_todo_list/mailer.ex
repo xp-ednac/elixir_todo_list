@@ -1,3 +1,3 @@
 defmodule ElixirTodoList.Mailer do
-  @moduledoc false
+  use Swoosh.Mailer, otp_app: :elixir_todo_list
 end

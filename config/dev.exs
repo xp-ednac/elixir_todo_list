@@ -13,7 +13,7 @@ config :elixir_todo_list, ElixirTodoListWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "qWN+GPcxX0938+QzyDDePPHJktS0ZytA9gr7ljh9xmFgSV7UGbP8/G8q574rDvuX",
+  secret_key_base: "Ag8KB4Jre3i3boaj32lMB47IHa1j5VFlMEWNv0hNH6nKpykkP2jK27uzCQltao6h",
   watchers: [
     esbuild: {Esbuild, :install_and_run, [:elixir_todo_list, ~w(--sourcemap=inline --watch)]},
     tailwind: {Tailwind, :install_and_run, [:elixir_todo_list, ~w(--watch)]}
@@ -48,12 +48,12 @@ config :elixir_todo_list, ElixirTodoListWeb.Endpoint,
     web_console_logger: true,
     patterns: [
       # Static assets, except user uploads
-      ~r"priv/static/(?!uploads/).*\.(js|css|png|jpeg|jpg|gif|svg)$"E,
+      ~r"priv/static/(?!uploads/).*\.(js|css|png|jpeg|jpg|gif|svg)$",
       # Gettext translations
-      ~r"priv/gettext/.*\.po$"E,
+      ~r"priv/gettext/.*\.po$",
       # Router, Controllers, LiveViews and LiveComponents
-      ~r"lib/elixir_todo_list_web/router\.ex$"E,
-      ~r"lib/elixir_todo_list_web/(controllers|live|components)/.*\.(ex|heex)$"E
+      ~r"lib/elixir_todo_list_web/router\.ex$",
+      ~r"lib/elixir_todo_list_web/(controllers|live|components)/.*\.(ex|heex)$"
     ]
   ]
 
