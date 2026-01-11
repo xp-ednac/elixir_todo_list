@@ -71,7 +71,6 @@ Antes de iniciar, certifique-se de ter instalado:
 ```bash
 git clone https://github.com/xp-ednac/elixir_todo_lis.git
 cd elixir_todo_list
----
 ```
 
 ### 🚀 Executar a Aplicação
