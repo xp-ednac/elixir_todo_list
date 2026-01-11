@@ -1,6 +1,14 @@
-# 📋 Todo List com Elixir e Phoenix LiveView
+### UNIVERSIDADE FEDERAL DO MARANHÃO - UFMA
+### CENTRO DE CIÊNCIAS EXATAS E TECNOLOGIA – CCET
+### DEPARTAMENTO DO CURSO DE ENGENHARIA DA COMPUTAÇÃO
+### DISCIPLINA: TÓPICOS DE ENGENHARIA DA COMPUTAÇÃO II - 2025.2
 
-## 👩‍🎓 Nome do Aluno
+### 📋 Todo List com Elixir e Phoenix LiveView
+
+## Docente
+Dr. Sérgio Souza Costa
+
+## 👩‍🎓 Nome discente
 Edna Cristina Durans Santos
 
 ---
@@ -63,3 +71,13 @@ Antes de iniciar, certifique-se de ter instalado:
 ```bash
 git clone https://github.com/xp-ednac/elixir_todo_lis.git
 cd elixir_todo_list
+---
+```
+
+### 🚀 Executar a Aplicação
+mix phx.server
+---
+A aplicação estará disponível em:
+👉 http://localhost:4000
+
+
