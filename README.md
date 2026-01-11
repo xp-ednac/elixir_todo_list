@@ -5,10 +5,10 @@
 
 ### 📋 Todo List com Elixir e Phoenix LiveView
 
-## Docente
+#### Docente
 Dr. Sérgio Souza Costa
 
-## 👩‍🎓 Nome discente
+#### 👩‍🎓 Nome discente
 Edna Cristina Durans Santos
 
 ---
@@ -75,8 +75,10 @@ cd elixir_todo_list
 ```
 
 ### 🚀 Executar a Aplicação
+```bash
 mix phx.server
----
+````
+----
 A aplicação estará disponível em:
 👉 http://localhost:4000
 
