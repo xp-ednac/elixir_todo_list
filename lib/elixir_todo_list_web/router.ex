@@ -14,11 +14,12 @@ defmodule ElixirTodoListWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", ElixirTodoListWeb do
-    pipe_through :browser
+scope "/", ElixirTodoListWeb do
+  pipe_through :browser
+  live "/", TodoLive, :index
+end
 
-    get "/", PageController, :home
-  end
+
 
   # Other scopes may use custom stacks.
   # scope "/api", ElixirTodoListWeb do
