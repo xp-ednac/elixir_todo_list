@@ -24,7 +24,7 @@ defmodule ElixirTodoListWeb.TodoLive do
         Minha Lista de Tarefas (com DB!)
       </h1>
 
-      <!-- FORMULÁRIO DE NOVA TAREFA -->
+      <!-- FORMULÁRIO DE CRIAÇÃO -->
       <.form for={@form} id="task-form" phx-submit="save_task">
         <.input
           field={@form[:title]}
@@ -48,7 +48,7 @@ defmodule ElixirTodoListWeb.TodoLive do
 
             <% task_form = Task.changeset(task, %{}) |> to_form() %>
 
-            <!-- CHECKBOX + TÍTULO -->
+            <!-- FORM DE CHECKBOX -->
             <.form
               for={task_form}
               phx-change="toggle_complete"
@@ -61,11 +61,13 @@ defmodule ElixirTodoListWeb.TodoLive do
                   field={task_form[:completed]}
                 />
 
-                <label class={
-                  if task.completed,
-                    do: "line-through text-gray-500",
-                    else: "text-gray-900"
-                }>
+                <label
+                  class={
+                    if task.completed,
+                      do: "line-through text-gray-400 italic",
+                      else: "text-gray-900 font-medium"
+                  }
+                >
                   <%= task.title %>
                 </label>
               </div>
@@ -76,7 +78,7 @@ defmodule ElixirTodoListWeb.TodoLive do
               type="button"
               phx-click="delete"
               phx-value-id={task.id}
-              class="!p-1 !bg-red-500 hover:!bg-red-700"
+              class="!p-2 !bg-red-600 hover:!bg-red-700 text-white font-bold rounded-full"
             >
               &times;
             </.button>
@@ -126,6 +128,6 @@ defmodule ElixirTodoListWeb.TodoLive do
     |> Task.changeset(%{completed: completed_status})
     |> Repo.update()
 
-    {:noreply, assign(socket, :tasks, Repo.all(Task))}
+    {:noreply, assign(socket, tasks: Repo.all(Task))}
   end
 end
